@@ -25,7 +25,6 @@ public class SortingDemo {
             System.out.println("\n===== Procesando Dataset: " + names[i] + " =====");
             System.out.println("Original: " + Arrays.toString(datasets[i]));
 
-            // Copiamos los arreglos porque los sorts son IN-PLACE
             int[] arrIns = SortingUtils.copyArray(datasets[i]);
             int[] arrSel = SortingUtils.copyArray(datasets[i]);
             int[] arrBub = SortingUtils.copyArray(datasets[i]);
