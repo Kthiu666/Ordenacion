@@ -20,7 +20,7 @@ El proyecto implementa los tres algoritmos de ordenación básica solicitados, d
 * **Métricas:**
     * **InsertionSort:** Cuenta los **desplazamientos** (shifts) de elementos.
     * **SelectionSort:** Cuenta los **intercambios** (swaps).
-    * **BubbleSort:** Cuenta los **intercambios** (swaps) e implementa la optimización de **corte temprano**.
+    * **BubbleSort:** Cuenta los **intercambios** e implementa la optimización de **corte temprano**.
 
 ## 2. Casos Borde Probados
 
