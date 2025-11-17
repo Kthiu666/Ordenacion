@@ -38,12 +38,12 @@ public class SortingDemo {
 
             // 2. Selection Sort
             System.out.println("\n---- SelectionSort (Trazas) ----");
-            SelectionSort.sort(arrSel, true); // ¡Descomentado!
+            SelectionSort.sort(arrSel, true);
             System.out.println("RESULTADO (Selection): " + Arrays.toString(arrSel));
 
             // 3. Bubble Sort
             System.out.println("\n---- BubbleSort (Trazas) ----");
-            BubbleSort.sort(arrBub, true); // ¡Descomentado!
+            BubbleSort.sort(arrBub, true);
             System.out.println("RESULTADO (Bubble): " + Arrays.toString(arrBub));
 
             System.out.println("---------------------------------");
