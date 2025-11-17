@@ -6,7 +6,6 @@
 
 **Algoritmos:** InsertionSort, SelectionSort, BubbleSort
 
----
 
 ## 1. Decisiones de Implementación
 

@@ -10,7 +10,7 @@ public class SortingDemo {
         int[] C = {1, 2, 3, 4, 5}; // (ya ordenado)
         int[] D = {2, 2, 2, 2}; // (duplicados)
         int[] E = {9, 1, 8, 2};
-        // Casos borde adicionales
+        // Casos adicionales
         int[] F = {7}; // Tamaño 1
         int[] G = {};  // Vacío
 
