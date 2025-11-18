@@ -17,6 +17,8 @@ El proyecto implementa los tres algoritmos de ordenación básica solicitados, d
 
 **Sobrecarga:** Todos los algoritmos implementan la firma `public static void sort(int[] a)` y la sobrecarga `public static void sort(int[] a, boolean trace)` para imprimir trazas.
 
+**In-Place**: Todos los métodos `sort` modifican el arreglo original (in-place). Por ello, `SortingDemo` debe crear copias.
+
 * **Métricas:**
     * **InsertionSort:** Cuenta los **desplazamientos** (shifts) de elementos.
     * **SelectionSort:** Cuenta los **intercambios** (swaps).
@@ -24,7 +26,7 @@ El proyecto implementa los tres algoritmos de ordenación básica solicitados, d
 
 ## 2. Casos Borde Probados
 
-Además de los datasets A-E, la clase `SortingDemo` prueba los siguientes casos borde:
+La clase `SortingDemo` prueba los siguientes casos borde:
 
 * **Arreglo vacío:** `[]`
 * **Arreglo de tamaño 1:** `[7]`
@@ -45,22 +47,22 @@ Además de los datasets A-E, la clase `SortingDemo` prueba los siguientes casos 
 
 Esta tabla compara el número de operaciones clave (swaps o desplazamientos) observadas para cada algoritmo.
 
-| Dataset | Arreglo Original  | InsertionSort (Desplazamientos) | SelectionSort (Swaps) | BubbleSort (Swaps) |
-| :--- |:------------------|:-------------------------------:|:---------------------:|:------------------:|
-| A | `[8, 3, 6, 3, 9]` |                4                |           2           |         3          |
-| B | `[5, 4, 3, 2, 1]` |                4                |           2           |         4          |
-| C | `[1, 2, 3, 4, 5]` |                0                |           0           |         0          |
-| D | `[2, 2, 2, 2]`    |                0                |           0           |         0          |
-| E | `[9, 1, 8, 2]`    |                3                |           2           |         3          |
-| F | `[]`              |              Vacio              |         Vacio         |       Vacio        |
-| G | `[7]`             |                0                |           0           |         0          |
+| Dataset |  Arreglo Original  | InsertionSort |   SelectionSort   | BubbleSort |
+|:-------:|:------------------:|:-------------:|:-----------------:|:----------:|
+|    A    | `[8, 3, 6, 3, 9]`  |       4       |         2         |     4      |
+|    B    | `[5, 4, 3, 2, 1]`  |      10       |         2         |     10     |
+|    C    | `[1, 2, 3, 4, 5]`  |       0       |         0         |     0      |
+|    D    |   `[2, 2, 2, 2]`   |       0       |         0         |     0      |
+|    E    |   `[9, 1, 8, 2]`   |       4       |         2         |     4      |
+|    F    |        `[]`        |     Vacio     |       Vacio       |   Vacio    |
+|    G    |       `[7]`        |       0       |         0         |     0      |
 
 ## 5. Comparación Cualitativa
 
 Esta tabla resume cuándo es preferible usar cada algoritmo, basado en sus características.
 
-| Algoritmo | Desplazamientos o Swaps                              | Cuándo Usarlo (Caso Ideal)                                                        | Ventaja Clave                                                                                               |
-| :--- |:-----------------------------------------------------|:----------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------|
-| **Inserción (Insertion)** | A = 2, B = 2, C = 0, D = 0, E = 2, F = 0, G = Vacio. | Datos casi ordenados o con datos en tiempo real                                   | Es el más eficaz en datos pequeños y  si el arreglo está casi ordenado porque realiza menos comparaciones . |
-| **Selección (Selection)** | A = 4, B = 4, C = 0, D = 0, E = 3, F = 0, G = Vacio. | Para minimizar escritura en memoria ya que realiza menos intercambios.            | Es el más eficiente en intercambios por que realiza el mínimo número de intercambios de datos posible.      |
-| **Burbuja (Bubble)** | A = 3, B = 4, C = 0, D = 0, E = 3, F = 0, G = Vacio. | **Datos pequeños** o para **detectar si un arreglo ya está ordenado** muy rápido. | Su eficiencia en memoria ya que ordena, los elementos dentro del mismo arreglo.                     |
+|   Algoritmo    |                            Cuándo Usarlo (Caso Ideal)                             |                                                Ventaja Clave                                                |
+|:--------------:|:---------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------:|
+| **Inserción**  |                  Datos casi ordenados o con datos en tiempo real                  | Es el más eficaz en datos pequeños y  si el arreglo está casi ordenado porque realiza menos comparaciones . |
+| **Selección**  |      Para minimizar escritura en memoria ya que realiza menos intercambios.       |   Es el más eficiente en intercambios por que realiza el mínimo número de intercambios de datos posible.    |
+|  **Burbuja**   | **Datos pequeños** o para **detectar si un arreglo ya está ordenado** muy rápido. |               Su eficiencia en memoria ya que ordena, los elementos dentro del mismo arreglo.               |

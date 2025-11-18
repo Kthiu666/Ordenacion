@@ -35,7 +35,7 @@ public class SelectionSort {
             // hallar mínimo en i..n-1 y cambiar por a[i]"
             // Solo intercambiar si el mínimo no es ya el elemento en i
             if (indiceMinimo != i) {
-                swap(a, i, indiceMinimo);
+                SortingUtils.swap(a, i, indiceMinimo);
                 swaps++;
 
                 if (trace) {
@@ -57,9 +57,4 @@ public class SelectionSort {
         }
     }
 
-    private static void swap(int[] a, int i, int j) {
-        int temp = a[i];
-        a[i] = a[j];
-        a[j] = temp;
-    }
 }

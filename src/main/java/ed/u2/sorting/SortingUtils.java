@@ -2,13 +2,11 @@ package ed.u2.sorting;
 
 public class SortingUtils {
     /**
-     * Crea y devuelve una copia de un arreglo.
-     * Necesitamos probar los 3 algoritmos sobre los mismos datos iniciales.
+     * Intercambia dos elementos en un arreglo (in-place).
      */
-    public static int[] copyArray(int[] original) {
-        if (original == null) return null;
-        int[] copy = new int[original.length];
-        System.arraycopy(original, 0, copy, 0, original.length);
-        return copy;
+    public static void swap(int[] a, int i, int j) {
+        int temp = a[i];
+        a[i] = a[j];
+        a[j] = temp;
     }
 }

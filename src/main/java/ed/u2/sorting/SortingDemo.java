@@ -1,16 +1,16 @@
 package ed.u2.sorting;
 
-import java.util.Arrays; // Importante que esté
+import java.util.Arrays;
 
 public class SortingDemo {
     public static void main(String[] args) {
         // Datasets de la sección 7
-        int[] A = {8, 3, 6, 3, 9};       // [cite: 79]
-        int[] B = {5, 4, 3, 2, 1}; // (inverso) [cite: 80]
-        int[] C = {1, 2, 3, 4, 5}; // (ya ordenado) [cite: 81]
-        int[] D = {2, 2, 2, 2}; // (duplicados) [cite: 82]
-        int[] E = {9, 1, 8, 2};       // [cite: 83]
-        // Casos adicionales [cite: 60]
+        int[] A = {8, 3, 6, 3, 9};
+        int[] B = {5, 4, 3, 2, 1}; // (inverso)
+        int[] C = {1, 2, 3, 4, 5}; // (ya ordenado)
+        int[] D = {2, 2, 2, 2}; // (duplicados)
+        int[] E = {9, 1, 8, 2};    //
+        // Casos adicionales
         int[] F = {7}; // Tamaño 1
         int[] G = {};  // Vacío
 
@@ -38,12 +38,12 @@ public class SortingDemo {
 
             // 2. Selection Sort
             System.out.println("\n---- SelectionSort (Trazas) ----");
-            SelectionSort.sort(arrSel, true); // ¡Descomentado!
+            SelectionSort.sort(arrSel, true);
             System.out.println("RESULTADO (Selection): " + Arrays.toString(arrSel));
 
             // 3. Bubble Sort
             System.out.println("\n---- BubbleSort (Trazas) ----");
-            BubbleSort.sort(arrBub, true); // ¡Descomentado!
+            BubbleSort.sort(arrBub, true);
             System.out.println("RESULTADO (Bubble): " + Arrays.toString(arrBub));
 
             System.out.println("---------------------------------");

@@ -39,9 +39,7 @@ public class BubbleSort {
                 //Comparar elementos
                 if (a[j] > a[j + 1]) {
                     //Intercambiar elementos
-                    int tmp = a[j];
-                    a[j] = a[j + 1];
-                    a[j + 1] = tmp;
+                    SortingUtils.swap(a, j, j + 1);
                     Swaps = true;
                     //mostrar traza del swap
                     if (trace) {
